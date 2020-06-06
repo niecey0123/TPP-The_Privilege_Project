@@ -1,38 +1,205 @@
-.App {
+.video-container{
+  width: 100%;
+  height: 100%;
+}
+#polina { 
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100; 
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 2rem;
+  width: 28%;
+  font-size: 1.2rem;
+  position: absolute;
+  z-index: 2;
+  top:10%;
+  margin-left: 2%;
+}
+#polina button { 
+  display: block;
+  width: 80%;
+  padding: .4rem;
+  border: none; 
+  margin: 1rem auto; 
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 3px; 
+  cursor: pointer;
+  transition: .3s background;
+}
+
+#polina button:hover { 
+   background: rgba(0,0,0,0.5);
+   
+}
+#polina p {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#pixie{
+  color: yellow;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+span{
+  color: coral;
 }
+.question-container1{
+  width: 100vw;
+  height: 100vh;
+  background: url(https://lh3.googleusercontent.com/proxy/zGVPO07ccH_nfOUNuWbpiw3Eg-URdm3NAD0JVgZA4UIRGwMHyby6QyhH1Z2rf4VjJpYKySf7GvAzZ_fSz7-qVwRG415j9WiChae7uREwZ03PQrg99IiNerOb7oJTcllTJaHfJ_CtJihyucCQq5p5WLhEdcgjqf1c2zIxlg15U2-pZcNE);
+ background-size: cover;
+}
+/* .qTemplate{
+  width: 60%;
+  height: 50%;
+  border: solid rgba(255, 255, 255, 0.13);
+  margin-left: 20%;
+  margin-top: 14%;
+  position: absolute;
+  background: rgba(128, 128, 128, 0.144);
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.grandParent{
+   width: 60%;
+   height: 52%;
+   border: solid rgba(255, 255, 255, 0.13);
+   margin-left: 20%;
+   margin-top: 14%;
+   position: absolute;
+   background: rgba(128, 128, 128, 0.486);
+
+}
+.grandParent  h1{
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  background: rgba(231, 220, 220, 0.733);
+  padding: 10px;
+  text-align: center;
+  color: saddlebrown;
+
+}
+.parent{
+  display: flex;
+}
+.yes{
+ width: 100%;
+ height: 35vh;
+ background: rgba(231, 220, 220, 0.164);
+border: white solid;
+text-align: center;
+font-size: 23pt;
+
+transition: all .2s ease-in-out;
+
+}
+div .yes:hover{
+  /* background: rgba(106, 142, 35, 0.685); */
+  transform: scale(1.1);
+  color: white;
+  font-size: 33pt;
+
+}
+.remain{
+margin-left: 30%;
+}
+.selected {
+  background: linear-gradient(to right, hsla(17, 88%, 56%, 0.685), rgba(231, 233, 228, 0.808)) !important;
+}
+.container-md{
+  position: absolute;
+  z-index: 4;
+}
+.card-container{
+  display: flex;
+  flex-wrap: wrap ;
+  justify-content:space-evenly;
+
+}
+.makeStyles-root-1 {
+  margin-top: 2%;
+}
+.deli{
+  background: url(https://newyorkyimby.com/wp-content/uploads/2017/09/New-York-Deli-and-Grocery-on-Metropolitan-Avenue-e1300751107908.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: inherit;
+  background-size: cover;
+}
+#iphone{
+  background: url(https://i.ya-webdesign.com/images/iphone-6-png-no-background-5.png);
+  width: 530px;
+  height: 700px;
+  position: absolute;
+  margin-left: 58%;
+  margin-top: 41.5%;
+  max-height: 192px;
+  overflow:hidden;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: .27s; 
+  /* animation-iteration-count: infinite; */
+}
+@keyframes bounce{
+  from {left: 0px;}
+  to {right: 50px ;}
+}
+.intro{
+  border: solid white;
+  width: 65%;
+  height: 406px;
+  background: rgba(38, 39, 39, 0.747);
+  margin-left: 21%;
+  display: flex;
+}
+.intro li{
+  list-style: none;
+ text-align: center;
+ color: yellow;
+}
+#user1{
+  width:350px;
+  height:300px ;
+  box-shadow: rgba(234, 241, 171, 0.904) 4px 6px 5px 4px;
+  border-radius: 3%;
+  margin-left: 1%;
+  margin-top: 1%;
+
+}
+.intro h1{
+  padding: 4%;
+color: yellow;
+}
+.intro p{
+  color: white;
+  padding: 4%;
+  color: yellow;
+}
+.intro2{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.gameBtn{
+  width: 70px;
+  margin-left: 40%;
+
+}
+.gameBtn:hover{
+  background: rgb(247, 209, 40);
+  color:red;
+}
+/* #no{
+  width: 100%;
+  height: 35vh;
+  background:  rgba(231, 220, 220, 0.164);
+  border: white solid;
+  text-align: center;
+  padding-top: 14%;
+  font-size: 23pt;
+  transition: all .2s ease-in-out;
+
+
+}
+div #no:hover{
+  transform: scale(1.1);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  font-size: 33pt;
+  background: rgba(106, 142, 35, 0.685);
+} */
