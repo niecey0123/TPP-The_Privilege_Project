@@ -134,13 +134,15 @@ margin-left: 30%;
   max-height: 192px;
   overflow:hidden;
   animation: bounce; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: .27s; 
+  animation-duration: .2s; 
+  animation-delay: 8s;
   /* animation-iteration-count: infinite; */
 }
 @keyframes bounce{
   from {left: 0px;}
   to {right: 50px ;}
 }
+
 .intro{
   border: solid white;
   width: 65%;
@@ -184,6 +186,38 @@ color: yellow;
 .gameBtn:hover{
   background: rgb(247, 209, 40);
   color:red;
+}
+.ansCall{
+  position: absolute;
+  z-index: 4;
+
+}
+.enable{
+  margin-left: 15%;
+  position: relative;
+  margin-top: 25%;
+}
+.enable:hover{
+transform: scale(1.1);
+}
+.disable{
+  margin-left: 50%;
+  position: relative;
+  margin-top: 25%;
+}
+.disable:hover{
+  transform: scale(1.1);
+
+}
+.exit{
+  position: absolute;
+  z-index: 2;
+  margin-top:2%; 
+}
+.scene2{
+  background: url(https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492197559/articles/2014/07/09/castro-street-s-hot-cop-chris-kohrs-is-the-batman-to-sexy-mug-shot-guy-s-joker/140709-hod-hot-cop-tease_mmejrf);
+  width: 100vw;
+  height: 100vh;
 }
 /* #no{
   width: 100%;

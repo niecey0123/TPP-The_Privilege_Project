@@ -1,10 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ChatBot from 'react-simple-chatbot';
+import FirstCop from './FirstCop';
 
 
-const MyChatBot = ()=>{
+
+class MyChatBot extends Component{
+
+ 
+    constructor(props) {
+      super(props);
+    this.state = {
+      chatEnded: this.props.chat
+    }
+    }
+  
+     componentDidMount(){
+       console.log(this.props.chat);
+       
+     }
+ 
+  render(){
+    
+    
     return(
+    
+      <div>
+       
+      {!this.props.chat ? 
         <ChatBot
+        botAvatar="https://thesource.com/wp-content/uploads/2016/10/image11.jpeg"
+        headerTitle	="Steph"
+
     steps={[
       {
         id: '1',
@@ -52,8 +78,17 @@ const MyChatBot = ()=>{
         end: true,
       },
     ]}
+    
   />
+  :
+<FirstCop />
+
+
+       }
+
+  </div>
     )
+  }
 }
 
 export default MyChatBot;

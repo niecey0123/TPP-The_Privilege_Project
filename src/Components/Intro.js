@@ -1,7 +1,10 @@
 import React , {Component} from 'react';
 import 'react-h5-audio-player/lib/styles.css';
-import PhoneEnabledIcon from '@material-ui/icons/PhoneEnabled';
-import PhoneDisabledIcon from '@material-ui/icons/PhoneDisabled';
+import blueFace from '../audio/thotiana_.mp3'
+import Icon from '@material-ui/core/Icon';
+import MyChatBot from './MyChatBot';
+import FirstCop from './FirstCop';
+
 
 let audio = null;
 
@@ -10,39 +13,55 @@ class Intro extends Component {
         super(props);
         this.state = { 
             isActive: true,
-            play: null
+            play: null,
+            chatReady: false,
+            chatEnded: false,
          }
-         this.url = "https://s21.aconvert.com/convert/p3r68-cdx67/6g56t-5x91q.mp3";
-         this.audio = new Audio(this.url);
-        //  this.phoneRings = this.phoneRings.bind(this);
+        //  this.url = "https://s21.aconvert.com/convert/p3r68-cdx67/fe1ds-yekle.mp3";
+         this.audio = new Audio(blueFace);
+         this.phoneRings = this.phoneRings.bind(this);
+         this.toggleChat = this.toggleChat.bind(this);
+
     }
 
-  handleHide = () =>{
+    handleHide = () =>{
     this.setState({
         isActive: false
     })
-}
+    }
 
-  componentDidMount(){
+ 
+
+    toggleChat = () => {
+
+    // function that will toggle active/false
+      this.setState({
+          chatReady: true
+      })
+    }
+ 
+
+    componentDidMount(){
 
   audio = setTimeout(() => this.phoneRings(), 10000)
- 
+
     
   }
 
-  componentWillUnmount() {
+    componentWillUnmount() {
     clearTimeout(audio);
   }
 
-  phoneRings = ()=> {
+
+    phoneRings = () => {
 this.setState({ play: !this.state.play })
     console.log(this.audio);
 this.state.play ? this.audio.play() : this.audio.pause();
   }
   
- 
+  
     render() { 
-      
+
         return ( 
             <div>
                 {this.state.isActive ?
@@ -65,13 +84,27 @@ this.state.play ? this.audio.play() : this.audio.pause();
 
                             <audio autoPlay>
                                 {this.state.play}
-                                <PhoneEnabledIcon />
-                                <PhoneDisabledIcon />
-                            {/* <source src="https://s21.aconvert.com/convert/p3r68-cdx67/6g56t-5x91q.mp3" type="audio/mpeg" /> */}
-                            </audio>
+                                </audio>
+                               <Icon onClick={()=>this.setState({chatEnded: true})}  color="disabled" className="disable" style={{ fontSize: 60 }}>phone_disabled</Icon>
+                               {/* onClick={()=>this.setState({chatEnded: !chatEnded})}  */}
+                                <Icon onClick={this.toggleChat} className="enable" style={{ fontSize: 60 }}>phone_enabled</Icon>
+                                {/* {!chatEnded ? 
+                <FirstCop />
+            :
+            null} */}
+                   
 
                 </div> }
+                {this.state.chatReady ?
+                                    <MyChatBot  chat={this.state.chatEnded}
+                                    /> :
+                                  null
+                                    }
+                
+               
+             
         </div>
+        
          );
         }
 }

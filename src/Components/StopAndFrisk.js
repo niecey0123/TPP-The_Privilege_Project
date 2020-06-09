@@ -14,7 +14,6 @@ class StopAndFrisk extends Component {
         })
     }
     render() { 
-        const {gameStarted} = this.state;
         return ( 
           
             <div className="deli">

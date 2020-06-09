@@ -3,7 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
 } from "react-router-dom";
 
 import Home  from "./Components/Home"
@@ -27,6 +27,7 @@ function App() {
         <Route path="/N_scenerio/2/">
           <StopAndFrisk />
         </Route>
+        
       </Switch>
     </div>
   </Router>
