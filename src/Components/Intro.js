@@ -3,7 +3,6 @@ import 'react-h5-audio-player/lib/styles.css';
 import blueFace from '../audio/thotiana_.mp3'
 import Icon from '@material-ui/core/Icon';
 import MyChatBot from './MyChatBot';
-import FirstCop from './FirstCop';
 
 
 let audio = null;

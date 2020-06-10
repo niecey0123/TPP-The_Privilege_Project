@@ -21,7 +21,7 @@ export const scenerioData = [
       id: 3,
       scenerio: ` No Minorities Allowed`,
       photo_url:  `https://previews.123rf.com/images/carmendorin/carmendorin1403/carmendorin140300016/26376985-grunge-rubber-stamp-with-text-no-service-vector-illustration.jpg`,
-      andescriptionswer: ``
+      description: ``
     },
     {
         id: 4,

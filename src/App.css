@@ -218,22 +218,162 @@ transform: scale(1.1);
   background: url(https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492197559/articles/2014/07/09/castro-street-s-hot-cop-chris-kohrs-is-the-batman-to-sexy-mug-shot-guy-s-joker/140709-hod-hot-cop-tease_mmejrf);
   width: 100vw;
   height: 100vh;
+  background-size: cover;
 }
-/* #no{
-  width: 100%;
-  height: 35vh;
-  background:  rgba(231, 220, 220, 0.164);
-  border: white solid;
-  text-align: center;
-  padding-top: 14%;
-  font-size: 23pt;
-  transition: all .2s ease-in-out;
 
 
-}
-div #no:hover{
-  transform: scale(1.1);
+.thought {
+  display:flex;
+	background-color: orange;
+  padding:30px;
+  border-radius:30px;
+  min-width:80px;
+  max-width:320px;
+  min-height:80px;
+  margin:0% 0% 0% 65%;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  transform: translate(0px, 40px);
   color: white;
-  font-size: 33pt;
-  background: rgba(106, 142, 35, 0.685);
-} */
+  font-size: 16pt;
+}
+.thought:before,
+.thought:after {
+  content:"";
+  background-color:#fff;
+  border-radius:50%;
+  display:block;
+  position:absolute;
+  z-index:-1;
+}
+.thought:before {
+  width:44px;
+  height:44px;
+  top:-12px;
+  left:28px;
+  /* box-shadow: orange; */
+  box-shadow:-50px 30px 0 -12px rgb(29, 28, 28);
+}
+.thought:after {
+  bottom:-10px;
+  right:26px;
+  width:30px;
+  height:30px;
+  box-shadow:40px -34px 0 0 rgb(58, 56, 56),
+             -28px -6px 0 -2px rgb(58, 56, 56),
+             -24px 17px 0 -6px rgb(58, 56, 56),
+             -5px 25px 0 -10px rgb(58, 56, 56);
+  
+}
+.copAns{
+  display:flex;
+	background-color: orange;
+  padding:30px;
+  border-radius:30px;
+  min-width:80px;
+  max-width:520px;
+  min-height:80px;
+  margin:20% 0% 0% 2%;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  transform: translate(0px, 40px);
+  color: white;
+  font-size: 16pt;
+  justify-content: space-around;
+}
+.copAns:before,
+.copAns:after {
+  content:"";
+  background-color:#fff;
+  border-radius:50%;
+  display:block;
+  position:absolute;
+  z-index:-1;
+}
+.copAns:before {
+  width:44px;
+  height:44px;
+  top:-12px;
+  left:28px;
+  /* box-shadow: orange; */
+  box-shadow:-50px 30px 0 -12px rgb(29, 28, 28);
+}
+.copAns:after {
+  bottom:-10px;
+  right:26px;
+  width:30px;
+  height:30px;
+  box-shadow:40px -34px 0 0 rgb(58, 56, 56),
+             -28px -6px 0 -2px rgb(58, 56, 56),
+             -24px 17px 0 -6px rgb(58, 56, 56),
+             -5px 25px 0 -10px rgb(58, 56, 56);
+  
+}
+.copAnsBtn{
+  margin: .5% 0% .5% 17%;
+  position: relative;
+  
+}
+.selected {
+  background: rgba(0, 0, 0, 0.342) !important;
+}
+.options{
+  padding: 1%;
+  border-radius: 25%;
+}
+.copContainer{
+  background: url(https://media.nbcnewyork.com/2019/09/AP477952873768.jpg?resize=850%2C478);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.scene3{
+  background: rgba(38, 39, 39, 0.747);
+
+}
+.scene3 p{
+  color: white;
+  padding: 8px;
+  text-align: center;
+  font-size: 14pt;
+}
+#funFact{
+  color: yellow;
+  font-weight: bolder;
+  font-size: x-large;
+}
+#next{
+  position: absolute;
+  margin: 0% 0% 0% 90%;
+  font-size: 45px;
+}
+#jail{
+  background: url(https://i.pinimg.com/originals/35/32/82/353282ad8d006b31ce512a6d6a2b0be4.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.c-camera-feed__viewer{
+  position: absolute;
+  margin:7% 0% 0% 25%;
+
+
+}
+.c-camera-feed__viewer video{
+  border-radius: 30%;
+}
+#mug{
+  margin: 47% 0% 0% 47%;
+ 
+}
+#mug:hover{
+  background: red;
+  color:white;
+  transform: scale(1.5);
+}
